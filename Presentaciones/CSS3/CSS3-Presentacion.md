@@ -83,7 +83,7 @@ En el elemento `<style>` dentro del elemento `<head>`
 
  # Definidos en el tag HTML
 
-En el atributo style del elemento HTML
+En el atributo `style` del elemento HTML en cuestión
 
 ```html
 <div style="background:#f00;color:#fff;">Texto blanco sobre fondo rojo</div>
@@ -175,10 +175,8 @@ Los estilos se aplican a todos `<span>` que están dentro de un `<a class="negri
 # Pseudo-elementos CSS3
 
 * `::before`, elemento virtual antes de la selección
-* `::after`, elemento virtual después de la
-selección
-* `::first-line`, primera línea de texto del
-elemento
+* `::after`, elemento virtual después de la selección
+* `::first-line`, primera línea de texto del elemento
 * `::first-letter`, primera letra de la primera línea del texto del elemento
 
 ---
@@ -195,7 +193,7 @@ elemento
 
 ![Box Model](img/box-model-1.png) ![Box Model Hierarchy](img/box-model-2.png)
 
-El `margin` es espacio desde el borde hacia afuera de la caja. El `border` es borde de la caja. El `padding` es el espacio desde el borde hacia adentro de la caja
+El `margin` es el espacio desde el borde hacia afuera de la caja. El `border` es el borde de la caja. El `padding` es el espacio desde el borde hacia adentro de la caja
 
 ---
 
@@ -220,17 +218,17 @@ right: DESPLAZAMIENTO;
 left: DESPLAZAMIENTO;
 ```
 
-En el posicionamiento `relative`, el desplazamiento se hace desde la posición original del borde (superior / derecho / inferior / izquierdo) de elemento seleccionado.
+En el posicionamiento `relative`, el desplazamiento se hace desde la posición original del borde (superior / derecho / inferior / izquierdo) del elemento seleccionado.
 
-En el posicionamiento `absolute`, el desplazamiento se hace respecto del borde (superior / derecho / inferior / izquierdo), del primer elemento padre diferente a `static`.
+En el posicionamiento `absolute`, el desplazamiento se hace respecto del borde (superior / derecho / inferior / izquierdo) del primer elemento padre diferente a `static`.
 
 ---
 
 # Propiedad overflow
 
-Controla la forma en que se muestra contenido que sobresale de su contenedor cuando tiene una altura fija:
+Controla la forma en que se muestra contenido que sobresale de un contenedor con altura fija:
 
-* `visible`: el contenido no se corta y se muestra sobresaliendo. (ajuste predeterminado)
+* `visible`: el contenido no se corta y se muestra sobresaliendo (ajuste predeterminado)
 * `hidden`: el contenido sobrante se oculta
 * `scroll`: se muestra el contenido dentro del contenedor, pero con barras de scroll para navegarlo (aunque no sean necesarias)
 * `auto`: según el navegador y la necesidad de mostrar contenido, con barras de scroll
