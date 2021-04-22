@@ -135,7 +135,7 @@ Para entender mejor las diferencias entre `let` y `var`: https://stackoverflow.c
 
 ```js
 y = 3 * x + 5;
-geoCABA = {lat: -34.61315, long: -58.37723}
+geoCABA = {lat: -34.61315, long: -58.37723};
 ```
 
 * Suma, resta, multiplica, o divide el valor de la expresión de la derecha a la variable de la izquierda
@@ -197,14 +197,17 @@ console.log(a); // Debe imprimir 11
 * Deben estar definidas antes de ser usadas
 * Pueden, o no, retornar un valor u otra función
 * Definición:
+
 ```js
 function f() {
   // instrucciones de la función
 }
 ```
+
 * Llamada:
+
 ```js
-f()
+f();
 ```
 
 ---
@@ -252,16 +255,16 @@ if (expresión) {
 ```js
 switch (expresión) {
   case valor1:
-    // código si valor es valor1
+    // código si expresión es valor1
     break;
   case valor2:
-    // código si valor es valor2
+    // código si expresión es valor2
     break;
   case valor3:
-    // código si valor es valor3
+    // código si expresión es valor3
     break;
   default:
-    // código si valor no es ninguno de los anteriores
+    // código si expresión no vale ninguno de los anteriores
 }
 ```
 
@@ -308,7 +311,6 @@ for (inicialización; expresión; actualización) {
 * `alert(texto)`. Muestra un pop-up con el texto
 * `open()`. Abre una nueva ventana del navegador
 * `close()`. Cierra la ventana del navegador
-* `back()`. Vuelve a la página anterior
 * `print()`. Imprime la pantalla
 * `prompt()`. Muestra un pop-up con un campo de entrada de datos y devuelve el valor ingresado por el usuario
 
