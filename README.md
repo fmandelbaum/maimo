@@ -11,3 +11,4 @@ Si Usted utiliza este material para alguno de sus proyectos, por favor haga menc
 * Repaso HTML5: [leer online](Presentaciones/HTML5/HTML5-Presentacion.md), [descargar PDF](Presentaciones/HTML5/HTML5-Presentacion.pdf)
 * Repaso CSS3: [leer online](Presentaciones/CSS3/CSS3-Presentacion.md), [descargar PDF](Presentaciones/CSS3/CSS3-Presentacion.pdf)
 * Repaso CSS3 Extras: [leer online](Presentaciones/CSS3/CSS3-Presentacion_Extras.md), [descargar PDF](Presentaciones/CSS3/CSS3-Presentacion_Extras.pdf)
+* Repaso Javascript: [leer online](Presentaciones/Javascript/Javascript-Presentacion.md), [descargar PDF](Presentaciones/Javascript/Javascript-Presentacion.pdf)

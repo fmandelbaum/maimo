@@ -351,3 +351,6 @@ MigrationBackup/
 
 # macOS-specific
 .DS_Store
+
+# Project-specific
+tests/
