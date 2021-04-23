@@ -11,7 +11,7 @@ Es imperativo, débilmente tipado, dinámico, orientado a objetos, basado en pro
 
 Un archivo Javscript es texto.
 
-Javascript se puede usar del lado del cliente (en el navegador web) y del lado del servidor (ej: Node.js).
+Javascript se puede usar del lado del cliente (en el navegador web) y del lado del servidor (ej: Node.js (https://nodejs.org)).
 
 Del lado del cliente los programas JS se incluyen en los documentos HTML, y se encargan de realizar acciones como pedir datos, confirmaciones, mostrar mensajes, animaciones, comprobar campos, interactuar con servicios web, etc.
 
@@ -23,7 +23,7 @@ En el pasado había muchos problemas de compatibilidad entre los navegadores.
 
 Hoy día casi no hay problemas de compatibilidad, los navegadores modernos soportan casi todo lo nuevo de JS.
 
-Ante la duda: Can I Use (https://caniuse.com)
+Ante la duda: https://caniuse.com
 
 ---
 
@@ -33,7 +33,7 @@ Embebido en el HTML:
 
 ```html
 <script>
-código Javscript
+// código Javscript
 </script>
 ```
 
@@ -69,7 +69,7 @@ Para entender mejor las diferencias entre `let` y `var`: https://stackoverflow.c
 
 # Nombres de las variables
 
-* Deben comenzar con una letra o el _ (guión bajo); los caracteres siguientes pueden ser números o letras
+* Deben comenzar con una letra o el `_` (guión bajo); los caracteres siguientes pueden ser números o letras
 
 * No se pueden utilizar caracteres especiales como espacios o signos
 
@@ -255,10 +255,8 @@ if (expresión) {
 ```js
 switch (expresión) {
   case valor1:
-    // código si expresión es valor1
-    break;
   case valor2:
-    // código si expresión es valor2
+    // código si expresión es valor1 o es valor2
     break;
   case valor3:
     // código si expresión es valor3
