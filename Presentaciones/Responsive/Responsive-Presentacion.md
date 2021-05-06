@@ -86,7 +86,7 @@ marp: true
   width: 62.88888889%; /* 566px/900px */
 }
 
-.blog.other {
+.blog .other {
   float: right;
   width: 36.77777778%; /* 331px/900px */
 }
@@ -134,12 +134,13 @@ img { max-width: 100%; }
 # Fondos flexibles
 
 ![Fondo flexible 1](img/back-flex1.png)
-![Fondo flexible 2](img/back-flex2.png)
 
 ```css
-.blog { background: #f8f5f2 url(blog-bg.png) repeat-y 63.11111111% 0; }
+.blog {
+  background: linear-gradient(90deg, #f8f5f2 63.11111111%, rgba(178,178,178,1) 63.11111111%);
+}
 ```
-Usar CSS3 `background-size` (`auto`, `ancho_y_alto`, `%`, `cover`, `contain`, `initial`, `inherit`)
+Usar CSS3 `background-size` (`auto`, `ancho_y_alto`, `%`, `cover`, `contain`, `initial`, `inherit`) para ajustar al tamaño de la caja si es necesario
 
 ---
 
@@ -208,19 +209,19 @@ Usar CSS3 `background-size` (`auto`, `ancho_y_alto`, `%`, `cover`, `contain`, `i
 # Ejemplos de Media Queries
 
 ```css
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   /* Reglas CSS para pantallas chicas */
 }
 ```
 
 ```css
-@media screen and (min-width: 480px and orientation: portrait) {
+@media screen and (max-width: 480px and orientation: portrait) {
   /* Reglas CSS para pantallas chicas en vertical */
 }
 ```
 
 ```css
-@media print and (resolution: 600dpi) {
+@media print and (min-resolution: 600dpi) {
   /* Reglas CSS para imprimir en alta resolución */
 }
 ```
