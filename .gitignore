@@ -355,3 +355,4 @@ MigrationBackup/
 # Project-specific
 tests/
 practicas/
+alumnos*
