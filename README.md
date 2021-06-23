@@ -13,3 +13,4 @@ Si Usted utiliza este material para alguno de sus proyectos, por favor haga menc
 * Repaso CSS3 Extras: [leer online](Presentaciones/CSS3/CSS3-Presentacion_Extras.md), [descargar PDF](Presentaciones/CSS3/CSS3-Presentacion_Extras.pdf)
 * Repaso Javascript: [leer online](Presentaciones/Javascript/Javascript-Presentacion.md), [descargar PDF](Presentaciones/Javascript/Javascript-Presentacion.pdf)
 * Introducción al diseño web responsive: [leer online](Presentaciones/Responsive/Responsive-Presentacion.md), [descargar PDF](Presentaciones/Responsive/Responsive-Presentacion.pdf)
+* Javascript Asincrónico: [leer online](Presentaciones/Promises/Promises-Presentacion.md), [descargar PDF](Presentaciones/Promises/Promises-Presentacion.pdf)
