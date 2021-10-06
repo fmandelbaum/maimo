@@ -160,3 +160,25 @@ a:hover {
   transition: background 0.3s ease;
 }
 ```
+
+---
+
+# Dark Mode
+
+* Con un media query se puede detectar la preferencia del usuario para el "modo oscuro" y especificar CSS diferentes para que nuestro sitio o app soporte dicho modo:
+
+```css
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #fff;
+    background: #333;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: #333;
+    background: #fff;
+  }
+}
+```
