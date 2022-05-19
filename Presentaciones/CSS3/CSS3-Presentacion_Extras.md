@@ -107,8 +107,10 @@ div.multifondo {
 # WebFonts
 
 * Permite usar tipografías que quien visita el sitio no tiene instaladas en su dispositivo
+* Font Squirrel (https://www.fontsquirrel.com/)
+* dafont (http://www.dafont.com/)
+* Everything fonts (https://everythingfonts.com/)
 * Google Fonts (https://fonts.google.com/)
-* Adobe Fonts (https://fonts.adobe.com/)
 * Font Awesome [iconos] (https://fontawesome.com/)
 
 ```css

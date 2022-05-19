@@ -4,7 +4,7 @@ marp: true
 
 # HTML5
 
-HTML5 es un lenguaje de marcas (*markup*), o etiquetas (*tags*), para la creación de documentos de hypertexto. Las etiquetas definen la estructura lógica del documento y la semántica del contenido.
+HTML5 es un lenguaje de marcas (*markup*), o etiquetas (*tags*), para la creación de documentos de hipertexto. Las etiquetas definen la estructura lógica del documento y la semántica del contenido.
 
 Un documento HTML5 es texto: etiquetas y contenido.
 
@@ -36,9 +36,9 @@ Un documento HTML5 es texto: etiquetas y contenido.
 |```<p>```|Párrafos|
 |```<em>```, ```<strong>```|Énfasis, importante|
 |```<ol>```, ```<ul>```, ```<li>```|Listas con y sin orden|
-|```<table>```, ```<tr>```, ```<th>```, ```<td>```|Tablas|
+|```<table>```, ```<thead>```, ```<tbody>```, ```<tr>```, ```<th>```, ```<td>```|Tablas|
 |```<form>```, ```<input>```, ```<select>```, ```<textarea>```|Formularios|
-|```<img>```, ```<video>```, ```<audio>```|Multimedios: imágenes, sonido y vídeo|
+|```<img>```, ```<audio>```, ```<video>```|Imágenes, sonido y vídeo|
 
 ---
 
@@ -91,25 +91,28 @@ Puedo usar el atributo `start` para comenzar la numeración en un número distin
 
 ```html
 <table>
-  <caption>Título de la tabla (opcional)</caption>
-  <tr>
-    <th>Encabezado 1</th>
-    <th>Encabezado 2</th>
-  </tr>
-  <tr>
-    <td>Celda 1</td>
-    <td>Celda 2</td>
-  </tr>
-  <tr>
-    <td>Celda 3</td>
-    <td>Celda 4</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Encabezado 1</th>
+      <th>Encabezado 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Celda 1</td>
+      <td>Celda 2</td>
+    </tr>
+    <tr>
+      <td>Celda 3</td>
+      <td>Celda 4</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
 ---
 
-# Fusión de celdas (<td>)
+# Fusión de celdas (<th> o <td>)
 
 ```html
 <td colspan="cant_columnas" rowspan="cant_filas">
@@ -205,7 +208,7 @@ Se puede usar el atributo `multiple` para permitir elegir más de una opción (p
 
 ---
 
-# Formularios - Atributos
+# Formularios - Input - Atributos
 
 * `placeholder="texto predeterminado"` (Texto predeterminado a mostrar, ej: Ingrese su nombre)
 * `autofocus` (Pone el foco en este elemento)

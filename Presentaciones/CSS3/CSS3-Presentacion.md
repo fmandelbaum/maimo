@@ -13,7 +13,7 @@ Un documento CSS3 es texto.
 # Documento CSS3
 
 ```css
-tag {
+p {
   background-color: #ff0;
   color: #000;
   font-weight: bold;
@@ -44,9 +44,9 @@ tag {
 
 # Orden de cascada
 
-1. Hoja de estilos del navegador (por defecto, depende del navegador)
+1. Hoja de estilos del navegador (por defecto, los estilos dependen del navegador)
 1. Hoja de estilos externa (declarada antes del tag `<style>`)
-1. Estilos definidos en el `<head>` del documento HTML5 (tag `<style>`) 
+1. Estilos definidos en el `<head>` del documento HTML5 (tag `<style>`)
 1. Estilos definidos en un tag HTML5 (atributo `style`)
 
 ---
@@ -95,7 +95,7 @@ Utilizar solo para casos puntuales que así lo requieran
 
 # Comentarios en CSS
 
-Se pueden utilizar comentarios con el fin de ordenar nuestro código o porque más de una persona lo utilizará
+Se pueden utilizar comentarios con el fin de ordenar el código o porque más de una persona lo utilizará
 
 ```css
 /* Esto es un comentario */
@@ -141,15 +141,33 @@ section span { color: blue; }
 
 ---
 
-# Selectores CSS
-
-Algunos ejemplos
+# Selectores CSS - Ejemplos
 
 ```css
 p, a, .negrita, span { color: #f00; }
 ```
 
-Los estilos se aplican a todos los `<p>` y a todos los `<a>`, y a todos los elementos con `class="negrita"`, y a todos los `<span>` 
+---
+
+# Selectores CSS - Ejemplos
+
+```css
+p, a, .negrita, span { color: #f00; }
+```
+
+Los estilos se aplican a todos los `<p>` y a todos los `<a>`, y a todos los elementos con `class="negrita"`, y a todos los `<span>`
+
+---
+
+# Selectores CSS - Ejemplos
+
+```css
+p a.negrita span { color: #f00; }
+```
+
+---
+
+# Selectores CSS - Ejemplos
 
 ```css
 p a.negrita span { color: #f00; }
@@ -161,7 +179,7 @@ Los estilos se aplican a todos `<span>` que están dentro de un `<a class="negri
 
 # Pseudo-clases CSS
 
-* `:link`, selecciona vínculos que aún no han sido visitados 
+* `:link`, selecciona vínculos que aún no han sido visitados
 * `:visited`, selecciona vínculos que han sido visitados
 * `:hover`, selecciona el vínculo sobre el que está posicionado el mouse
 * `:active`, selecciona el vínculo sobre el que el usuario está "presionando"
@@ -246,26 +264,7 @@ position: relative;
 z-index: 10;
 ```
 
----
-
-# Texto en múltiples columnas
-
-```css
-.col3 {
-  columns: 3;
-}
-```
-```html
-<div class="col3">Este texto va a ocupar tres columnas.
-La idea es usarlo con textos largos, con mucho contenido.
-Acá está separado en varios renglones,
-para facilitar su lectura en la presentación en clase; pero en
-un sitio real, este contenido
-puede estar todo junto, como un "chorizo",
-y el render se va a ajustar a las tres columnas.</div>
-```
-
-La cantidad que se especifica en `columns` es la cantidad máxima de columnas para el render (en el render real puede ser menor...)
+El `<body>` tiene z-index 0, los z-index negativos quedan "por detrás" del `<body>`
 
 ---
 
@@ -329,5 +328,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient
 
 * MDN CSS (https://developer.mozilla.org/en-US/docs/Web/CSS)
 * CSS Tricks (https://css-tricks.com/)
-* Can I Use …? (http://www.caniuse.com/)
-* CSS Zen Garden (http://www.csszengarden.com/)
+* Can I Use …? (https://www.caniuse.com/)
+* CSS Zen Garden (https://csszengarden.com/)
+* W3 Schools (https://www.w3schools.com/css)

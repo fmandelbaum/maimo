@@ -6,7 +6,7 @@ marp: true
 
 * La web no es un lienzo, ni una página impresa
 * La web se consume en una pantalla de tamaño fijo
-* Cada vez hay más dispositivos diferentes (*tablet*, *smartphone*, *smartTV*, *smartwatch*, ...) para consumir contenido en la web
+* Cada vez hay más dispositivos diferentes (*tablet*, *smartphone*, *smartTV*, *smartwatch*, *autos*, *heladeras*...) para consumir contenido en la web
 * Las pantallas son a la vez más chicas y más grandes
 * El ancho de banda de las conexiones de Internet es cada vez mayor; sin embargo no siempre está disponible, o es costoso
 
@@ -16,7 +16,7 @@ marp: true
 
 * Es la implementación única de un sitio para todos los tamaños (y orientaciones) de los dispositivos
 * El sitio se adapta al tamaño del dispositivo
-* La experiencia del usuario se ajusta según el dispositivo (potencia o características del hardware) y de la conexión de red (calidad y velocidad)
+* La experiencia del usuario se ajusta según el dispositivo (potencia o características del hardware) y la conexión de red (calidad y velocidad)
 
 ---
 
@@ -26,12 +26,6 @@ marp: true
 * Adaptación al medio (“CSS Media Queries”)
 * Degradación con gracia (*graceful degradation*)
 * Mejora progresiva (*progressive enhancement*)
-
----
-
-# Grilla tipográfica
-
-![Grilla tipográfica](img/usogrilla1.jpeg)
 
 ---
 
@@ -107,6 +101,12 @@ marp: true
 
 * Usar `body { font-size: 100%; }` para asegurar un tamaño base, por lo general `16px`
 * Usar `em` para el resto de las tipografías. Ej: en vez de `font-size: 24px;` usar `font-size: 1.5em;`
+* Usando la función `clamp()` se puede hacer que el texto se ajuste automáticamente dentro de un rango:
+```css
+html {
+  font-size: clamp(1em, 0.75em + 1.5vw, 2em);
+}
+```
 * **resultado = objetivo / contexto**
 
 ---
@@ -115,20 +115,30 @@ marp: true
 
 * Para **tipografías flexibles**, el *contexto* es **el tamaño del body**
 * Para **márgenes flexibles**, el *contexto* es el **ancho del elemento contenedor**
-* Para **padding flexible**, el *contexto* es el **ancho del elemento mismo**
+* Para **padding flexible**, el *contexto* es el **tamaño del elemento mismo**
 
 ---
 
 # Imágenes flexibles
 
-* Utilizar imágenes del mayor tamaño necesario
-* Restringir el tamaño máximo que pueden tener las imágenes con
+* Restringir el tamaño máximo que pueden tener las imágenes (u otros medios)
 ```css
-img { max-width: 100%; }
+img { max-inline-size: 100%; block-size: auto; }
 ```
-* También se pueden servir diferentes imágenes para los diferentes dispositivos (*server-side enhancement*)
-* Esta técnica es aplicable a otros medios: *object*, *embed*, *video*
-
+* También se pueden servir diferentes imágenes para los diferentes dispositivos
+```html
+<img
+  src="chica.jpg"
+  alt="una imagen"
+  srcset="chica.jpg 300w,
+          mediana.jpg 600w,
+          grande.jpg 1200w"
+  sizes="(min-width: 66em) 33vw,
+         (min-width: 44em) 50vw,
+         100vw"
+>
+```
+* Para los iconos usar SVG en vez de PNG
 ---
 
 # Fondos flexibles
@@ -154,7 +164,7 @@ Usar CSS3 `background-size` (`auto`, `ancho_y_alto`, `%`, `cover`, `contain`, `i
 # CSS Media Types
 
 * Definir tipos de medios donde se consume el contenido web, para especificar CSS distintos para cada tipo
-* `all`, `braile`, `embossed`, `handheld`, `print`, `projection`, `screen`, `speech`, `tty`, `tv`
+* `all`, `screen`, `print`, `speech`
 ```html
 <link rel="stylesheet" media="print" href="impresora.css">
 ```
@@ -183,13 +193,11 @@ Usar CSS3 `background-size` (`auto`, `ancho_y_alto`, `%`, `cover`, `contain`, `i
 
 | Característica |Definición | max- y min- |
 |----------------|-----------|-------------|
-| **width** | Ancho de la pantalla | sí |
-| **orientation** | Rotación, `portrait` o `landscape` | no |
-| **device-aspect-ratio** | Rel. entre ancho y alto de la superficie de render | sí |
-| **resolution** | Densidad de pixels del dispositivo | sí |
-| height | Alto de la pantalla | sí |
-| device-width | Ancho de la superficie de render | sí |
-| device-height | Alto de la superficie de render | sí |
+| width | Ancho de la superficie de render | sí |
+| height | Alto de la superficie de render | sí |
+| orientation | Rotación, `portrait` o `landscape` | no |
+| aspect-ratio | Rel. entre ancho y alto de la superficie de render | sí |
+| resolution | Densidad de pixels del dispositivo | sí |
 
 ---
 
@@ -198,7 +206,6 @@ Usar CSS3 `background-size` (`auto`, `ancho_y_alto`, `%`, `cover`, `contain`, `i
 | Característica |Definición | max- y min- |
 |----------------|-----------|-------------|
 | color | Bits de componente de color | sí |
-| aspect-ratio | Relación entre ancho y alto | sí |
 | color-index | Cant. de entradas en tabla de colores | sí |
 | monochrome | Bits por pixel en pantallas monocromáticas | sí |
 | scan | Para TVs, `progresive` o `scan` | no |
@@ -265,3 +272,4 @@ Usar CSS3 `background-size` (`auto`, `ancho_y_alto`, `%`, `cover`, `contain`, `i
 * [Golden Grid System](https://goldengridsystem.com/)
 * [A List Appart - Fluid Grids](https://alistapart.com/article/fluidgrids)
 * [Google Developers - Mobile Sites](https://developers.google.com/webmasters/mobile-sites)
+* [Learn Responsive Design](https://web.dev/learn/design/)

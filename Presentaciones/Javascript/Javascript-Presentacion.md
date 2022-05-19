@@ -47,7 +47,7 @@ En un archivo externo:
 
 # Constantes, variables y valores
 
-* Constantes: una vez declaradas y definidas no se puede cambiar su valor. Por lo general sus nombres se escriben todo en mayúsculas
+* Constantes: una vez declaradas y definidas no se puede cambiar su valor. Por lo general sus nombres se escriben en mayúsculas
 
 ```js
 const PI = 3.141592654;
@@ -86,16 +86,10 @@ Para entender mejor las diferencias entre `let` y `var`: https://stackoverflow.c
   * `Number.NEGATIVE_INFINITY` = -∞
   * `3 / 0` = Infinity
 
-* `NaN` (Not A Number) es un valor que no se puede representar con un número definido, asignado o resultante de una operación matemática:
+* `NaN` (*Not A Number*) es un valor que no se puede representar con un número definido, asignado o resultante de una operación matemática:
   * `0 / 0` = `NaN`
   * `Number.POSITIVE_INFINITY / Number.POSITIVE_INFINITY` = `NaN`
   * `10 / "Hola Mundo"` = `NaN`
-
----
-
-# Tipos de datos - Lógicos o Booleanos
-
-* Valor de verdad: `true` (verdadero), o `false` (falso)
 
 ---
 
@@ -119,6 +113,13 @@ Para entender mejor las diferencias entre `let` y `var`: https://stackoverflow.c
 
 * Variables declaradas cuyo valor aún no se definió con el operador de asignación
 * También se puede encontrar `undefined` al intentar ejecutar una función que no está definida (las funciones en JS son “ciudadanos de 1er nivel”, como las variables)
+
+---
+
+# Tipos de datos - Lógicos o Booleanos
+
+* Valor de verdad: `true` (verdadero), o `false` (falso)
+* El valor booleano de los operandos con tipos de datos `null` o `undefined` y el número `0` es `false`
 
 ---
 
@@ -178,9 +179,9 @@ console.log(a); // Debe imprimir 11
 
 # Operadores - Lógicos
 
-* Y (AND), `&&`; `true` si ambos operandos son `true`
-* O (OR), `||`; `true` si cualquiera de los operandos es `true`
-* No (NOT), `!`; `true` si el operando es `false`
+* Y (*AND*), `&&`; `true` si ambos operandos son `true`
+* O (*OR*), `||`; `true` si cualquiera de los operandos es `true`
+* No (*NOT*), `!`; `true` si el operando es `false`
 
 ---
 
@@ -194,7 +195,7 @@ console.log(a); // Debe imprimir 11
 # Funciones
 
 * Promueven la estructuración y reutilización del código
-* Deben estar definidas antes de ser usadas
+* Deben estar definidas antes de ser usadas (llamadas)
 * Pueden, o no, retornar un valor u otra función
 * Definición:
 
@@ -230,7 +231,7 @@ f(3,4,5); // c vale 5
 
 ---
 
-# Estructuras condicionales
+# Estructuras condicionales - if
 
 * `if`. Se ejecuta el bloque de código si la expresión evalúa a `true`:
 ```js
@@ -238,7 +239,19 @@ if (expresión) {
   /* código a ejecutar */
 }
 ```
-* `if-else`. Permite ejecutar código también cuando la expresión evalúa a `false`:
+
+Ej:
+```js
+let adivinar = Math.round(Math.random() * 10);
+if (a > adivinar) {
+  alert("El número es menor");
+}
+```
+---
+
+# Estructuras condicionales - if ... else
+
+* `if ... else`. Permite ejecutar código también cuando la expresión evalúa a `false`:
 ```js
 if (expresión) {
   /* código si true */
@@ -247,9 +260,21 @@ if (expresión) {
 }
 ```
 
+Ej:
+```js
+let adivinar = Math.round(Math.random() * 10);
+if (a > adivinar) {
+  alert("El número es menor");
+} else if (a < adivinar) {
+  alert("El número es mayor");
+} else {
+  alert("¡Adivinó!");
+}
+```
+
 ---
 
-# Estructuras condicionales (cont.)
+# Estructuras condicionales - switch
 
 * `switch`. Útil para expresiones con más de dos resultados de evaluación:
 ```js
@@ -268,7 +293,7 @@ switch (expresión) {
 
 ---
 
-# Estructuras repetitivas
+# Estructuras repetitivas - while
 
 * `while`. Evalúa una expresión y ejecuta el bloque mientras dicha evaluación sea `true`. El bloque puede no ejecutarse nunca
 ```js
@@ -276,24 +301,52 @@ while (expresión) {
   // código a ejecutar en cada iteración
 }
 ```
-* `do-while`. Ejecuta el bloque y evalúa una expresión para determinar si repite la ejecución. El bloque ejecuta al menos una vez
+
+Ej:
+```js
+let a = 0;
+while (a < 10) {
+  a++;
+  console.log(a);
+}
+```
+
+---
+
+# Estructuras repetitivas - do ... while
+
+* `do ... while`. Ejecuta el bloque y evalúa una expresión para determinar si repite la ejecución. El bloque ejecuta al menos una vez
 ```js
 do {
   // código a ejecutar en cada iteración
 } while (expresión)
 ```
 
+Ej:
+```js
+let a = 0;
+do {
+  a++;
+  console.log(a);
+} while (a < 10);
+```
 ---
 
-# Estructuras repetitivas (cont.)
+# Estructuras repetitivas - for
 
-* `for`. El más versátil, también puede funcionar como `while` y como `do-while`, dependiendo de la condición de inicio y de la actualización. El bloque puede ejecutarse nunca, una, o más veces
+* `for`. El más versátil, también puede funcionar como `while` y como `do ... while`, dependiendo de la condición de inicio y de la actualización. El bloque puede ejecutarse nunca, una, o más veces
 ```js
 for (inicialización; expresión; actualización) {
   // código a ejecutar en cada iteración
 }
 ```
 
+Ej:
+```js
+for (let a = 1; a <= 10; a++) {
+  console.log(a);
+}
+```
 ---
 
 # Objetos del navegador
